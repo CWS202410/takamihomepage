@@ -1,0 +1,31 @@
+import React from 'react';
+
+export function About() {
+  return (
+    <section id="about" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-center mb-12">たかみについて</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <p className="text-gray-600 leading-relaxed">
+              焼肉ハウスたかみは、大阪・伊丹空港近くで長年にわたり営業を続けてきた、老舗の名店です。創業以来、地域の皆さまに愛され、芸能人や有名人にもご利用いただくほどの評判を築いてまいりました。
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              当店では、最高級の上州黒毛和牛を使用したお肉をご提供しています。肉本来の旨味を堪能していただけるよう、厚切りのステーキスタイルでお楽しみいただけます。特にタンとハラミは格別です。焼肉を引き立てる秘伝のタレや、こだわりのキムチ、ユッケなど、長年受け継がれてきた当店ならではの逸品も自慢です。
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              ご家族やグループでの楽しいひとときから、おひとりさま、特別な日のお食事まで、さまざまなシーンでご利用いただけます。
+            </p>
+          </div>
+          <div className="h-96 rounded-lg overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80"
+              alt="店内の様子"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
