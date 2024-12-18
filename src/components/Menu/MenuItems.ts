@@ -18,11 +18,10 @@ export const menuItems: MenuItem[] = [
     limited: true
   },
   {
-    name: '特選ヘレ',
-    description: '特選ヘレ肉は牛肉の中でも最も柔らかく、上品な旨味を誇る希少部位。口の中でとろける極上の味わいを、ぜひご堪能ください。',
-    price: '4,280',
-    image: getOptimizedUrl({ publicId: MENU_IMAGES.here }),
-    limited: '数量限定'
+    name: '石焼ビビンバ',
+    description: '本場韓国の味で仕込んだナムルと、香ばしいおこげが楽しめる石焼ビビンバ。ピリ辛コチュジャンとともに、熱々の石鍋で味わう贅沢な一品です！',
+    price: '1,200',
+    image: getOptimizedUrl({ publicId: MENU_IMAGES.bibimbap }),
   },
   {
     name: 'あさりの貝汁',

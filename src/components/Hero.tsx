@@ -3,7 +3,7 @@ import React from 'react';
 export function Hero() {
   return (
     <section id="home" className="relative h-screen">
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?auto=format&fit=crop&q=80")',

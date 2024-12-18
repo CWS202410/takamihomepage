@@ -22,7 +22,7 @@ export function AccessInfo() {
           <div className="text-gray-600 space-y-2">
             <p>専用駐車場はございません。</p>
             <p>当店隣の「タイムズ駐車場」をご利用ください。<br />
-            満車の場合、近隣の駐車場もご利用いただけます。</p>
+              満車の場合、近隣の駐車場もご利用いただけます。</p>
             <p className="text-sm bg-gray-50 p-3 rounded">
               ※駐車場サービス券はタイムズ駐車場のみ対応しており、1組様につき1時間分を提供しておりますのでご了承ください。
             </p>
@@ -35,7 +35,7 @@ export function AccessInfo() {
         <div>
           <h3 className="font-bold mb-2">大阪伊丹空港をご利用のお客様</h3>
           <ul className="text-gray-600 space-y-1">
-            <li>伊丹空港から徒歩12分でご来店いただけます。</li>
+            <li>伊丹空港から徒歩10分でご来店いただけます。</li>
           </ul>
         </div>
       </div>
