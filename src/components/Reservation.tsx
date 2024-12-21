@@ -20,7 +20,7 @@ export function Reservation() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const subject = `焼肉ハウスたかみ 予約申込`;
     const body = `
 予約申込内容
@@ -93,7 +93,7 @@ TEL：06-6844-0200
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                日付
+                日付（毎週水曜定休日）
               </label>
               <input
                 type="date"
@@ -108,7 +108,7 @@ TEL：06-6844-0200
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 時間
               </label>
-              <select 
+              <select
                 name="time"
                 required
                 value={formData.time}
@@ -134,7 +134,7 @@ TEL：06-6844-0200
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 人数
               </label>
-              <select 
+              <select
                 name="people"
                 required
                 value={formData.people}
