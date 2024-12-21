@@ -24,9 +24,9 @@ export const menuItems: MenuItem[] = [
     image: getOptimizedUrl({ publicId: MENU_IMAGES.bibimbap }),
   },
   {
-    name: 'あさりの貝汁',
-    description: '新鮮なあさりの旨味が凝縮された逸品。焼肉との相性抜群。当店自慢の一品です。',
-    price: '680',
-    image: getOptimizedUrl({ publicId: MENU_IMAGES.soup }),
+    name: '桜ユッケ',
+    description: '秘伝のタレとスパイスで味付けされたユッケ。一度食べたら忘れられない逸品です',
+    price: '1,380',
+    image: getOptimizedUrl({ publicId: MENU_IMAGES.yukke }),
   }
 ];

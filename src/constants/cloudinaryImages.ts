@@ -4,5 +4,14 @@ export const MENU_IMAGES = {
   tan: 'tan_e5oisy',
   here: 'here_use2j0',
   bibimbap: 'bibimbap_gnwote',  // あなたがアップロードした画像のIDに置き換えてください
-  soup: 'soup_roi9zj',      // あなたがアップロードした画像のIDに置き換えてください
+  soup: 'soup_roi9zj',
+  yukke: 'yukke_atphbh',
+} as const;
+
+export const HERO_IMAGE = {
+  background: 'harami2_kxv2vt'
+} as const;
+
+export const ABOUT_IMAGE = {
+  interior: 'model_yakiniku_fzrhv4'
 } as const;
