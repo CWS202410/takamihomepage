@@ -13,6 +13,14 @@ export function Menu() {
             <MenuCard key={item.name} item={item} />
           ))}
         </div>
+        <div className="mt-12 text-center">
+          <a
+            href="/menu"
+            className="inline-flex items-center px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+          >
+            メニューをもっと見る
+          </a>
+        </div>
       </div>
     </section>
   );
