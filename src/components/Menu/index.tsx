@@ -17,6 +17,7 @@ export function Menu() {
           <a
             href="/menu"
             className="inline-flex items-center px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+            style={{ display: 'block' }}
           >
             メニューをもっと見る
           </a>
