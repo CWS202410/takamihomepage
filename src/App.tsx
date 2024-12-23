@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -10,24 +11,26 @@ import { Footer } from './components/Footer';
 import { FullMenu } from './pages/FullMenu';
 
 function App() {
-  // URLのパスを取得
-  const path = window.location.pathname;
-
-  // パスに基づいて表示するコンテンツを切り替え
-  if (path === '/menu') {
-    return <FullMenu />;
-  }
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   return (
     <div className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <About />
-      <Menu />
-      <Info />
-      <Careers />
-      <Reservation />
-      <Footer />
+      <Routes>
+        <Route path="/menu" element={<FullMenu />} />
+        <Route path="/" element={
+          <>
+            <Navbar />
+            <Hero />
+            <About />
+            <Menu />
+            <Info />
+            <Careers />
+            <Reservation />
+            <Footer />
+          </>
+        } />
+      </Routes>
     </div>
   );
 }
