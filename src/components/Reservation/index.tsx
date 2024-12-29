@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone } from 'lucide-react';
+import { DatePicker } from './DatePicker';
 
 export function Reservation() {
   const [formData, setFormData] = useState({
@@ -16,6 +17,13 @@ export function Reservation() {
       ...formData,
       [e.target.name]: e.target.value
     });
+  };
+
+  const handleDateChange = (date: string) => {
+    setFormData(prev => ({
+      ...prev,
+      date
+    }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -91,24 +99,10 @@ TEL：06-6844-0200
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
               />
             </div>
-            <div>
-              <div className="flex items-center justify-between mb-2">
-                <label className="block text-sm font-medium text-gray-700">
-                  日付
-                </label>
-                <span className="text-sm text-red-600 font-medium">
-                  定休日：水曜日
-                </span>
-              </div>
-              <input
-                type="date"
-                name="date"
-                required
-                value={formData.date}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
-              />
-            </div>
+            <DatePicker
+              value={formData.date}
+              onChange={handleDateChange}
+            />
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 時間

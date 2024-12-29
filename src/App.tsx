@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { Feature } from './components/Feature';
 import { About } from './components/About';
 import { Menu } from './components/Menu/index';
 import { Info } from './components/Info';
@@ -22,6 +23,7 @@ function App() {
           <>
             <Navbar />
             <Hero />
+            <Feature />
             <About />
             <Menu />
             <Info />

@@ -16,3 +16,9 @@ export const HERO_IMAGE = {
 export const ABOUT_IMAGE = {
   interior: 'model_yakiniku_fzrhv4'
 } as const;
+
+export const FEATURE_IMAGES = {
+  sauce: 'tare2_tvxdto',
+  beef: 'v1734928950/beef_quality',
+  harmony: 'v1734928950/harmony_taste'
+} as const;

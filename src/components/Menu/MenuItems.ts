@@ -17,7 +17,7 @@ export const menuItems: MenuItem[] = [
     image: getOptimizedUrl({ publicId: MENU_IMAGES.tan }),
     limited: true
   },
-  {
+ {
     name: '石焼ビビンバ',
     description: '本場韓国の味で仕込んだナムルと、香ばしいおこげが楽しめる石焼ビビンバ。ピリ辛コチュジャンとともに、熱々の石鍋で味わう贅沢な一品です！',
     price: '1,200',

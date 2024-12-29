@@ -10,18 +10,18 @@ export function Hero() {
 
   return (
     <section id="home" className="relative h-screen">
-      <div
+      <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url("${heroImageUrl}")`,
         }}
       >
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
       <div className="relative h-full flex items-center justify-center text-center">
         <div className="max-w-3xl px-4">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            美味しいを<br />こころゆくまで
+            極上の美味しさを<br />こころゆくまで
           </h1>
           <p className="text-xl text-gray-200 mb-8">
             創業51年<br />最高級の上州黒毛和牛と<br />伝統の味をご堪能ください
