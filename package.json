@@ -12,12 +12,12 @@
   "dependencies": {
     "@cloudinary/react": "^1.13.0",
     "@cloudinary/url-gen": "^1.19.0",
-    "@types/react-router-dom": "^5.3.3",
     "cloudinary": "^2.0.1",
     "lucide-react": "^0.344.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.28.1"
+    "react-helmet-async": "^2.0.4",
+    "react-router-dom": "^6.22.2"
   },
   "devDependencies": {
     "@eslint/js": "^8.56.0",

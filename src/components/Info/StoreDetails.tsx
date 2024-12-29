@@ -10,7 +10,7 @@ export function StoreDetails() {
           <h3 className="font-bold mb-2">住所</h3>
           <p className="text-gray-600">
             〒560-0034<br />
-            <a 
+            <a
               href="https://goo.gl/maps/ghR75n7UGrmAU1Xi9"
               target="_blank"
               rel="noopener noreferrer"
@@ -27,7 +27,7 @@ export function StoreDetails() {
           <h3 className="font-bold mb-2">営業時間・定休日</h3>
           <p className="text-gray-600">
             営業時間：17:00～23:00（L.O. 22:30）<br />
-            定休日：水曜日
+            定休日：水曜日　（年末年始 12/30~1/3は休業）
           </p>
         </div>
       </div>
@@ -36,13 +36,13 @@ export function StoreDetails() {
         <div>
           <h3 className="font-bold mb-2">お問い合わせ</h3>
           <p className="text-gray-600">
-            TEL：<a 
-              href="tel:06-6844-0200" 
+            TEL：<a
+              href="tel:06-6844-0200"
               className="hover:text-red-600 transition-colors"
             >
               06-6844-0200
             </a><br />
-            EMAIL：<a 
+            EMAIL：<a
               href="mailto:info@takami-29.co.jp"
               className="hover:text-red-600 transition-colors"
             >
