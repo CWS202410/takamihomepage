@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Menu, X } from 'lucide-react';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        !buttonRef.current?.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const handleSectionClick = () => {
+    setIsOpen(false);
+  };
 
   return (
     <nav className="bg-black/95 fixed w-full z-50">
@@ -23,6 +46,7 @@ export function Navbar() {
           </div>
           <div className="md:hidden">
             <button
+              ref={buttonRef}
               onClick={() => setIsOpen(!isOpen)}
               className="text-white hover:text-red-400 transition-colors"
             >
@@ -32,14 +56,14 @@ export function Navbar() {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden">
+        <div ref={menuRef} className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/95">
-            <a href="#home" className="block text-white hover:text-red-400 transition-colors px-3 py-2">ホーム</a>
-            <a href="#about" className="block text-white hover:text-red-400 transition-colors px-3 py-2">たかみについて</a>
-            <a href="#menu" className="block text-white hover:text-red-400 transition-colors px-3 py-2">メニュー</a>
-            <a href="#info" className="block text-white hover:text-red-400 transition-colors px-3 py-2">店舗情報</a>
-            <a href="#careers" className="block text-white hover:text-red-400 transition-colors px-3 py-2">採用情報</a>
-            <a href="#reservation" className="block text-white hover:text-red-400 transition-colors px-3 py-2">ご予約</a>
+            <a href="#home" onClick={handleSectionClick} className="block text-white hover:text-red-400 transition-colors px-3 py-2">ホーム</a>
+            <a href="#about" onClick={handleSectionClick} className="block text-white hover:text-red-400 transition-colors px-3 py-2">たかみについて</a>
+            <a href="#menu" onClick={handleSectionClick} className="block text-white hover:text-red-400 transition-colors px-3 py-2">メニュー</a>
+            <a href="#info" onClick={handleSectionClick} className="block text-white hover:text-red-400 transition-colors px-3 py-2">店舗情報</a>
+            <a href="#careers" onClick={handleSectionClick} className="block text-white hover:text-red-400 transition-colors px-3 py-2">採用情報</a>
+            <a href="#reservation" onClick={handleSectionClick} className="block text-white hover:text-red-400 transition-colors px-3 py-2">ご予約</a>
           </div>
         </div>
       )}
