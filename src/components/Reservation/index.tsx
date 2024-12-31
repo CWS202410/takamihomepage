@@ -1,9 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Phone } from 'lucide-react';
 import { DatePicker } from './DatePicker';
+import { FormInput } from './FormInput';
+import { validateField } from '../../lib/validation';
+
+interface FormErrors {
+  [key: string]: string | null;
+}
+
+interface FormData {
+  name: string;
+  phone: string;
+  date: string;
+  time: string;
+  people: string;
+  notes: string;
+}
 
 export function Reservation() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     phone: '',
     date: '',
@@ -12,23 +27,45 @@ export function Reservation() {
     notes: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [submitAttempts, setSubmitAttempts] = useState(0);
 
-  const handleDateChange = (date: string) => {
-    setFormData(prev => ({
-      ...prev,
-      date
-    }));
+  const validateForm = useCallback(() => {
+    const newErrors: FormErrors = {};
+    
+    // 各フィールドのバリデーション
+    Object.keys(formData).forEach((field) => {
+      const error = validateField(field, formData[field as keyof FormData]);
+      if (error) newErrors[field] = error;
+    });
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  }, [formData]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    
+    // リアルタイムバリデーション
+    const error = validateField(name, value);
+    setErrors(prev => ({ ...prev, [name]: error }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+    setSubmitAttempts(prev => prev + 1);
+
+    // スパム対策: 短時間での複数回送信を防止
+    if (submitAttempts >= 3) {
+      alert('送信回数が制限を超えました。しばらく時間をおいてお試しください。');
+      return;
+    }
+
+    if (!validateForm()) {
+      return;
+    }
+
     const subject = `焼肉ハウスたかみ 予約申込`;
     const body = `
 予約申込内容
@@ -73,39 +110,33 @@ TEL：06-6844-0200
         </div>
         <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                お名前
-              </label>
-              <input
-                type="text"
-                name="name"
-                required
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                電話番号
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                required
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
-              />
-            </div>
+            <FormInput
+              label="お名前"
+              name="name"
+              type="text"
+              value={formData.name}
+              onChange={handleChange}
+              error={errors.name}
+              required
+              maxLength={50}
+            />
+            <FormInput
+              label="電話番号"
+              name="phone"
+              type="tel"
+              value={formData.phone}
+              onChange={handleChange}
+              error={errors.phone}
+              required
+              pattern="0[0-9]{9,10}"
+            />
             <DatePicker
               value={formData.date}
-              onChange={handleDateChange}
+              onChange={(date) => setFormData(prev => ({ ...prev, date }))}
             />
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                時間
+                時間<span className="text-red-500 ml-1">*</span>
               </label>
               <select 
                 name="time"
@@ -131,7 +162,7 @@ TEL：06-6844-0200
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                人数
+                人数<span className="text-red-500 ml-1">*</span>
               </label>
               <select 
                 name="people"
@@ -157,9 +188,15 @@ TEL：06-6844-0200
                 rows={4}
                 value={formData.notes}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                maxLength={1000}
+                className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent ${
+                  errors.notes ? 'border-red-500' : 'border-gray-300'
+                }`}
                 placeholder="ご要望等ございましたらご記入ください。お子様用のお席、食器等もご準備いたします。"
               ></textarea>
+              {errors.notes && (
+                <p className="mt-1 text-sm text-red-500">{errors.notes}</p>
+              )}
             </div>
           </div>
           <div className="mt-8 space-y-4">
@@ -170,7 +207,8 @@ TEL：06-6844-0200
             </p>
             <button
               type="submit"
-              className="w-full bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors"
+              className="w-full bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors disabled:bg-gray-400"
+              disabled={submitAttempts >= 3}
             >
               メールで予約する
             </button>

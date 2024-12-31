@@ -10,12 +10,18 @@ export function Footer() {
     e.preventDefault();
     if (location.pathname === '/') {
       scrollToSection('home');
+    } else {
+      window.location.href = '/#home';
     }
   };
 
   const handleReservationClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    scrollToSection('reservation');
+    if (location.pathname === '/') {
+      scrollToSection('reservation');
+    } else {
+      window.location.href = '/#reservation';
+    }
   };
 
   return (
@@ -45,8 +51,7 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">お問い合わせ</h3>
             <p className="text-gray-400">
-              Tel: <a href="tel:06-6844-0200" className="hover:text-red-400 transition-colors">06-6844-0200</a><br />
-              Email: <a href="mailto:info@takami-29.co.jp" className="hover:text-red-400 transition-colors">info@takami-29.co.jp</a>
+              Tel: <a href="tel:06-6844-0200" className="hover:text-red-400 transition-colors">06-6844-0200</a>
             </p>
             <button
               onClick={handleReservationClick}
