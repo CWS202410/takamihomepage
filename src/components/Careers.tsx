@@ -21,6 +21,7 @@ export function Careers() {
             <h3 className="text-xl font-bold mb-4">アルバイトの待遇</h3>
             <ul className="list-disc list-inside mb-8 text-gray-600 space-y-2">
               <li>時給1,114円〜</li>
+              <li>能力に応じて随時昇給あり！</li>
               <li>美味しいまかない付き！</li>
               <li>交通費支給（上限あり）</li>
               <li>シフト制（週2日から勤務可能）</li>
