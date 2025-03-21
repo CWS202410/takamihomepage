@@ -20,7 +20,7 @@ export function Careers() {
 
             <h3 className="text-xl font-bold mb-4">アルバイトの待遇</h3>
             <ul className="list-disc list-inside mb-8 text-gray-600 space-y-2">
-              <li>時給1,250円〜</li>
+              <li>時給1,114円〜</li>
               <li>美味しいまかない付き！</li>
               <li>交通費支給（上限あり）</li>
               <li>シフト制（週2日から勤務可能）</li>
@@ -40,7 +40,6 @@ export function Careers() {
               </p>
               <div className="mt-4 text-gray-600">
                 <p>TEL：06-6844-0200</p>
-                <p>EMAIL：info@takami-29.co.jp</p>
               </div>
             </div>
           </div>
