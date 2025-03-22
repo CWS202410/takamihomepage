@@ -14,7 +14,7 @@ export const HERO_IMAGE = {
 } as const;
 
 export const ABOUT_IMAGE = {
-  interior: 'model_yakiniku_fzrhv4'
+  interior: 'koagari_xcgrye'
 } as const;
 
 export const FEATURE_IMAGES = {
