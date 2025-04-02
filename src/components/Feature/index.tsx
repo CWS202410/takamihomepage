@@ -14,8 +14,9 @@ export function Feature() {
       })
     },
     {
-      title: '51年の歴史が生み出す旨みと香り',
-      description: '創業以来51年にわたって継承されてきたレシピをもとに、毎月仕込むたびにさらに磨き上げられてきた秘伝のタレ。時代とともに改良と工夫を加え、より深く、より香り高い味わいへと進化し続けています。',
+      title: '51年の歴史が生み出す秘伝のタレ',
+      titleExtra: <span className="text-red-600">【販売開始】</span>,
+      description: '創業以来51年にわたって継承されてきた秘伝のタレが、ついにご家庭でもお楽しみいただけるようになりました。毎月仕込むたびにさらに磨き上げられ、時代とともに改良と工夫を加えることで、より深く、より香り高い味わいへと進化し続けています。店頭にて販売中の秘伝のタレを、ぜひご家庭でもご堪能ください。',
       imageSrc: getOptimizedUrl({
         publicId: FEATURE_IMAGES.sauce,
         width: 800
@@ -45,6 +46,7 @@ export function Feature() {
             <FeatureCard
               key={feature.title}
               title={feature.title}
+              titleExtra={feature.titleExtra}
               description={feature.description}
               imageSrc={feature.imageSrc}
             />
