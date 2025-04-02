@@ -36,6 +36,7 @@ ${formData.notes}
 
 ※このメールは予約申込です。
 ※店舗からの返信をもって予約確定となります。
+※秘伝タレは数に限りがございます。ご予約されたお客様に優先販売させていただきます。
 
 焼肉ハウス　たかみ
 https://goo.gl/maps/ghR75n7UGrmAU1Xi9
@@ -52,7 +53,7 @@ TEL：06-6844-0200
   return (
     <section id="reservation" className="py-20 bg-gray-50">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12">ご予約</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">ご予約（秘伝たれのご予約）</h2>
         <div className="text-center mb-8">
           <a
             href="tel:06-6844-0200"
@@ -164,7 +165,7 @@ TEL：06-6844-0200
                 value={formData.notes}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
-                placeholder="ご要望等ございましたらご記入ください。お子様用のお席、食器等もご準備いたします。"
+                placeholder="ご要望等ございましたらご記入ください。お子様用のお席、食器等もご準備いたします。秘伝タレのご購入はご予約時にお申し込みいただくとスムーズです。"
               ></textarea>
             </div>
           </div>

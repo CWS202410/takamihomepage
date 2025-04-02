@@ -10,7 +10,7 @@ export function Hero() {
 
   return (
     <section id="home" className="relative h-screen">
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url("${heroImageUrl}")`,
@@ -23,15 +23,23 @@ export function Hero() {
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             極上の美味しさを<br />こころゆくまで
           </h1>
-          <p className="text-xl text-gray-200 mb-8">
+          <p className="text-xl text-gray-200 mb-4">
             創業51年<br />最高級の上州黒毛和牛と<br />伝統の味をご堪能ください
           </p>
-          <a
-            href="#reservation"
-            className="inline-block bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition-colors"
-          >
-            ご予約はこちら
-          </a>
+          <div className="bg-red-600/90 rounded-lg p-4 mb-8 inline-block">
+            <p className="text-white font-bold">
+              ⭐️ 秘伝のタレ 販売開始 ⭐️<br />
+              <span className="text-sm">ご家庭でも当店の味をお楽しみいただけます</span>
+            </p>
+          </div>
+          <div>
+            <a
+              href="#reservation"
+              className="inline-block bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition-colors"
+            >
+              ご予約はこちら
+            </a>
+          </div>
         </div>
       </div>
     </section>
