@@ -26,12 +26,19 @@ export function Hero() {
           <p className="text-xl text-gray-200 mb-4">
             創業51年<br />最高級の上州黒毛和牛と<br />伝統の味をご堪能ください
           </p>
-          <div className="bg-red-600/90 rounded-lg p-4 mb-8 inline-block">
-            <p className="text-white font-bold">
-              ⭐️ 秘伝のタレ 販売開始 ⭐️<br />
-              <span className="text-sm">ご家庭でも当店の味をお楽しみいただけます</span>
-            </p>
-          </div>
+          <a
+            href="https://takami-29-tare.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <div className="bg-red-600/90 rounded-lg p-4 mb-8 inline-block hover:bg-red-700/90 transition-colors">
+              <p className="text-white font-bold">
+                秘伝のタレ 4/5 再入荷予定!<br />
+                <span className="text-sm">ご家庭でも当店の味をお楽しみいただけます</span>
+              </p>
+            </div>
+          </a>
           <div>
             <a
               href="#reservation"

@@ -165,7 +165,8 @@ TEL：06-6844-0200
                 value={formData.notes}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
-                placeholder="ご要望等ございましたらご記入ください。お子様用のお席、食器等もご準備いたします。秘伝タレのご購入はご予約時にお申し込みいただくとスムーズです。"
+                placeholder="ご要望等ございましたらご記入ください。お子様用のお席、食器等もご準備いたします。秘伝たれのご予約も可能です。
+                "
               ></textarea>
             </div>
           </div>
