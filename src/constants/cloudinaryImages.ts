@@ -18,7 +18,7 @@ export const ABOUT_IMAGE = {
 } as const;
 
 export const FEATURE_IMAGES = {
-  sauce: 'v1743948130/tare_double',
+  sauce: '貴美の真髄_9_fqgm2t',
   beef: 'v1734928950/beef_quality',
   harmony: 'v1734928950/harmony_taste'
 } as const;
