@@ -18,7 +18,7 @@ export const ABOUT_IMAGE = {
 } as const;
 
 export const FEATURE_IMAGES = {
-  sauce: 'tare2_tvxdto',
+  sauce: 'tare_double',
   beef: 'v1734928950/beef_quality',
   harmony: 'v1734928950/harmony_taste'
 } as const;

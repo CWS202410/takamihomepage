@@ -34,7 +34,7 @@ export function Hero() {
           >
             <div className="bg-red-600/90 rounded-lg p-4 mb-8 inline-block hover:bg-red-700/90 transition-colors">
               <p className="text-white font-bold">
-                秘伝のタレ 4/5 再入荷予定!<br />
+                秘伝のタレ 4/5 再入荷!<br />
                 <span className="text-sm">ご家庭でも当店の味をお楽しみいただけます</span>
               </p>
             </div>
