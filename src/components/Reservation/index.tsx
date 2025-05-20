@@ -32,7 +32,7 @@ export function Reservation() {
 
   const validateForm = useCallback(() => {
     const newErrors: FormErrors = {};
-    
+
     // 各フィールドのバリデーション
     Object.keys(formData).forEach((field) => {
       const error = validateField(field, formData[field as keyof FormData]);
@@ -46,7 +46,7 @@ export function Reservation() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    
+
     // リアルタイムバリデーション
     const error = validateField(name, value);
     setErrors(prev => ({ ...prev, [name]: error }));
@@ -91,7 +91,7 @@ TEL：06-6844-0200
 駐車場：隣のTimes駐車場をご利用ください。
     `.trim();
 
-    window.location.href = `mailto:info@takami-29.co.jp?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:info@takami-29.jp?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -138,7 +138,7 @@ TEL：06-6844-0200
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 時間<span className="text-red-500 ml-1">*</span>
               </label>
-              <select 
+              <select
                 name="time"
                 required
                 value={formData.time}
@@ -164,7 +164,7 @@ TEL：06-6844-0200
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 人数<span className="text-red-500 ml-1">*</span>
               </label>
-              <select 
+              <select
                 name="people"
                 required
                 value={formData.people}
@@ -189,9 +189,8 @@ TEL：06-6844-0200
                 value={formData.notes}
                 onChange={handleChange}
                 maxLength={1000}
-                className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent ${
-                  errors.notes ? 'border-red-500' : 'border-gray-300'
-                }`}
+                className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent ${errors.notes ? 'border-red-500' : 'border-gray-300'
+                  }`}
                 placeholder="ご要望等ございましたらご記入ください。お子様用のお席、食器等もご準備いたします。"
               ></textarea>
               {errors.notes && (
@@ -203,7 +202,8 @@ TEL：06-6844-0200
             <p className="text-sm text-gray-600">
               ※予約ボタンを押すと、ご利用のメールソフトが起動します。<br />
               ※予約内容を確認の上、送信してください。<br />
-              ※店舗からの返信をもって予約確定となります。
+              ※店舗からの返信をもって予約確定となります。<br />
+              ※メールソフトが起動しない場合は、<a href="tel:06-6844-0200" className="text-red-600 hover:underline">お電話（06-6844-0200）</a>でご予約ください。
             </p>
             <button
               type="submit"
