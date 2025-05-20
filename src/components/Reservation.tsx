@@ -47,7 +47,7 @@ TEL：06-6844-0200
 駐車場：隣のTimes駐車場をご利用ください。
     `.trim();
 
-    window.location.href = `mailto:info@takami-29.co.jp?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:info@takami-29.jp?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -174,7 +174,8 @@ TEL：06-6844-0200
             <p className="text-sm text-gray-600">
               ※予約ボタンを押すと、ご利用のメールソフトが起動します。<br />
               ※予約内容を確認の上、送信してください。<br />
-              ※店舗からの返信をもって予約確定となります。
+              ※店舗からの返信をもって予約確定となります。<br />
+              ※メールソフトが起動しない場合は、<a href="tel:06-6844-0200" className="text-red-600 hover:underline">お電話（06-6844-0200）</a>でご予約ください。
             </p>
             <button
               type="submit"
