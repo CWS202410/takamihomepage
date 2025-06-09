@@ -15,7 +15,7 @@ export function Careers() {
             <ul className="list-disc list-inside mb-8 text-gray-600 space-y-2">
               <li>ホールスタッフ（アルバイト）</li>
               <li>キッチンスタッフ（アルバイト）</li>
-              <li>職人（正社員）月収23万円〜、副料理長 27万円〜、料理長 30万円以上</li>
+              <li>職人（正社員）月収23万円〜、副料理長 30万円〜、料理長 40万円以上</li>
             </ul>
 
             <h3 className="text-xl font-bold mb-4">アルバイトの待遇</h3>
