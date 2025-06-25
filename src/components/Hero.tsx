@@ -41,7 +41,7 @@ export function Hero() {
             </div>
           </a>
           <div className="flex items-center justify-center space-x-4">
-            <span className="text-sm">詳しくはInstagramをご確認ください</span>
+            <span className="text-sm text-white">詳しくはInstagramをご確認ください</span>
             <a
               href="https://www.instagram.com/yakiniku_takami/"
               target="_blank"
