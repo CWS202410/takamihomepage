@@ -34,8 +34,8 @@ export function Hero() {
           >
             <div className="bg-red-600/90 rounded-lg p-4 mb-8 inline-block hover:bg-red-700/90 transition-colors">
               <p className="text-white font-bold">
-                秘伝のタレ 好評発売中!<br />
-                <span className="text-sm">ご家庭でも当店の味をお楽しみいただけます</span>
+                営業時間変更のお知らせ<br />
+                <span className="text-sm">詳しくはInstagramをご確認ください</span>
               </p>
             </div>
           </a>
