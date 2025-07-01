@@ -35,8 +35,8 @@ export function Hero() {
           >
             <div className="bg-red-600/90 rounded-lg p-4 mb-8 inline-block hover:bg-red-700/90 transition-colors">
               <p className="text-white font-bold">
-                営業時間変更のお知らせ<br />
-                <span className="text-sm">詳しくはInstagramをご確認ください</span>
+                7/1から営業時間22時まで<br />
+                <span className="text-sm">毎週火水定休日</span>
               </p>
             </div>
           </a>

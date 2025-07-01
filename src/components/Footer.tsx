@@ -29,8 +29,8 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               onClick={handleLogoClick}
               className="text-lg font-bold mb-4 hover:text-red-400 transition-colors inline-block"
             >
@@ -44,8 +44,8 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">営業時間・定休日</h3>
             <p className="text-gray-400">
-              営業時間：17:00～23:00（L.O. 22:30）<br />
-              定休日：水曜日
+              営業時間：17:00～22:00（L.O. 21:30）<br />
+              定休日：火曜・水曜
             </p>
           </div>
           <div>
