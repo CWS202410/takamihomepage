@@ -98,7 +98,7 @@ TEL：06-6844-0200
                   日付
                 </label>
                 <span className="text-sm text-red-600 font-medium">
-                  定休日：火曜・水曜（年末年始1/30~1/3は休業）
+                  定休日：火曜・水曜（年末年始1/30~1/3は休業）<br />当日のご予約はお電話でお願いします
                 </span>
               </div>
               <input

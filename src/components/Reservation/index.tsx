@@ -81,6 +81,7 @@ ${formData.notes}
 
 ※このメールは予約申込です。
 ※店舗からの返信をもって予約確定となります。
+※当日のご予約はお電話でお願いいたします。
 
 焼肉ハウス　たかみ
 https://goo.gl/maps/ghR75n7UGrmAU1Xi9
@@ -191,7 +192,7 @@ TEL：06-6844-0200
                 maxLength={1000}
                 className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent ${errors.notes ? 'border-red-500' : 'border-gray-300'
                   }`}
-                placeholder="ご要望等ございましたらご記入ください。お子様用のお席、食器等もご準備いたします。"
+                placeholder="当日のご予約はお電話でお願いしますご要望等ございましたらご記入ください。お子様用のお席、食器等もご準備いたします。"
               ></textarea>
               {errors.notes && (
                 <p className="mt-1 text-sm text-red-500">{errors.notes}</p>
@@ -201,6 +202,7 @@ TEL：06-6844-0200
           <div className="mt-8 space-y-4">
             <p className="text-sm text-gray-600">
               ※予約ボタンを押すと、ご利用のメールソフトが起動します。<br />
+              ※当日のご予約はお電話でお願いします。<br />
               ※予約内容を確認の上、送信してください。<br />
               ※店舗からの返信をもって予約確定となります。<br />
               ※メールソフトが起動しない場合は、<a href="tel:06-6844-0200" className="text-red-600 hover:underline">お電話（06-6844-0200）</a>でご予約ください。
