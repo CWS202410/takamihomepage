@@ -125,7 +125,7 @@ TEL：06-6844-0200
                 {[...Array(13)].map((_, i) => {
                   const hour = 17 + Math.floor(i / 2);
                   const minute = i % 2 === 0 ? '00' : '30';
-                  if (hour < 22 || (hour === 22 && minute === '00')) {
+                  if (hour < 21 || (hour === 21 && minute === '00')) {
                     return (
                       <option key={`${hour}:${minute}`} value={`${hour}:${minute}`}>
                         {`${hour}:${minute}`}
