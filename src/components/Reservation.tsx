@@ -8,6 +8,7 @@ export function Reservation() {
     date: '',
     time: '',
     people: '',
+    seatType: '',
     notes: ''
   });
 
@@ -30,6 +31,7 @@ export function Reservation() {
 予約日：${formData.date}
 予約時間：${formData.time}
 人数：${formData.people}名様
+席種：${formData.seatType}
 
 備考：
 ${formData.notes}
@@ -153,6 +155,23 @@ TEL：06-6844-0200
                     {i + 1}名様
                   </option>
                 ))}
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                席種
+              </label>
+              <select
+                name="seatType"
+                required
+                value={formData.seatType}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+              >
+                <option value="">選択してください</option>
+                <option value="テーブル席">テーブル席</option>
+                <option value="座敷">座敷</option>
+                <option value="どちらでも可">どちらでも可</option>
               </select>
             </div>
             <div className="md:col-span-2">
